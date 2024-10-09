@@ -1,4 +1,19 @@
 import Image from "next/image";
+import Link from 'next/link'; // Import Link for internal routing
+
+// New Week 4 Component - StudentInfo
+function StudentInfo() {
+  return (
+    <div>
+      <p>Your Name</p>
+      <p>
+        <Link href="https://github.com/your-github-username/cprg306-assignments" target="_blank">
+          My GitHub Repository
+        </Link>
+      </p>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -12,6 +27,8 @@ export default function Home() {
           height={38}
           priority
         />
+        
+        {/* Instructions List */}
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{" "}
@@ -23,6 +40,13 @@ export default function Home() {
           <li>Save and see your changes instantly.</li>
         </ol>
 
+        {/* Week 4 New Section: Student Info */}
+        <section className="mt-8">
+          <h2 className="text-lg font-bold">Week 4: Student Information</h2>
+          <StudentInfo /> {/* Render the StudentInfo Component */}
+        </section>
+
+        {/* Buttons */}
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
@@ -49,6 +73,8 @@ export default function Home() {
           </a>
         </div>
       </main>
+
+      {/* Footer */}
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
