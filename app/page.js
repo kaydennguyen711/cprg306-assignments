@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from 'next/link'; // Import Link for internal routing
+import Link from 'next/link'; 
 
-// New Week 4 Component - StudentInfo
 function StudentInfo() {
   return (
     <div>
